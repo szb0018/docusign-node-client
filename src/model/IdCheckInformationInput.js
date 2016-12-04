@@ -49,22 +49,22 @@
       }
       
       if (data.addressInformationInput) {
-        self.addressInformationInput = new data.addressInformationInput.constructor();
+        self.addressInformationInput = new AddressInformationInput();
         self.addressInformationInput.constructFromObject(data.addressInformationInput);
       }
       
       if (data.dobInformationInput) {
-        self.dobInformationInput = new data.dobInformationInput.constructor();
+        self.dobInformationInput = new DobInformationInput();
         self.dobInformationInput.constructFromObject(data.dobInformationInput);
       }
       
       if (data.ssn4InformationInput) {
-        self.ssn4InformationInput = new data.ssn4InformationInput.constructor();
+        self.ssn4InformationInput = new Ssn4InformationInput();
         self.ssn4InformationInput.constructFromObject(data.ssn4InformationInput);
       }
       
       if (data.ssn9InformationInput) {
-        self.ssn9InformationInput = new data.ssn9InformationInput.constructor();
+        self.ssn9InformationInput = new Ssn9InformationInput();
         self.ssn9InformationInput.constructFromObject(data.ssn9InformationInput);
       }
       

@@ -139,12 +139,12 @@
       }
       
       if (data.emailNotification) {
-        self.emailNotification = new data.emailNotification.constructor();
+        self.emailNotification = new RecipientEmailNotification();
         self.emailNotification.constructFromObject(data.emailNotification);
       }
       
       if (data.tabs) {
-        self.tabs = new data.tabs.constructor();
+        self.tabs = new Tabs();
         self.tabs.constructFromObject(data.tabs);
       }
       

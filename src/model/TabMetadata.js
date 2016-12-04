@@ -404,7 +404,7 @@
       }
       
       if (data.mergeField) {
-        self.mergeField = new data.mergeField.constructor();
+        self.mergeField = new MergeField();
         self.mergeField.constructFromObject(data.mergeField);
       }
       

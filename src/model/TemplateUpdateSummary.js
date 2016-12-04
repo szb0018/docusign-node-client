@@ -54,17 +54,17 @@
       }
       
       if (data.bulkEnvelopeStatus) {
-        self.bulkEnvelopeStatus = new data.bulkEnvelopeStatus.constructor();
+        self.bulkEnvelopeStatus = new BulkEnvelopeStatus();
         self.bulkEnvelopeStatus.constructFromObject(data.bulkEnvelopeStatus);
       }
       
       if (data.lockInformation) {
-        self.lockInformation = new data.lockInformation.constructor();
+        self.lockInformation = new LockInformation();
         self.lockInformation.constructFromObject(data.lockInformation);
       }
       
       if (data.errorDetails) {
-        self.errorDetails = new data.errorDetails.constructor();
+        self.errorDetails = new ErrorDetails();
         self.errorDetails.constructFromObject(data.errorDetails);
       }
       

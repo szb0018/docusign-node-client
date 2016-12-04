@@ -212,7 +212,7 @@
       }
       
       if (data.recipients) {
-        self.recipients = new data.recipients.constructor();
+        self.recipients = new Recipients();
         self.recipients.constructFromObject(data.recipients);
       }
       

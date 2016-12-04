@@ -330,7 +330,7 @@
       }
       
       if (data.notification) {
-        self.notification = new data.notification.constructor();
+        self.notification = new Notification();
         self.notification.constructFromObject(data.notification);
       }
       
@@ -427,7 +427,7 @@
       }
       
       if (data.emailSettings) {
-        self.emailSettings = new data.emailSettings.constructor();
+        self.emailSettings = new EmailSettings();
         self.emailSettings.constructFromObject(data.emailSettings);
       }
       
@@ -436,7 +436,7 @@
       }
       
       if (data.lockInformation) {
-        self.lockInformation = new data.lockInformation.constructor();
+        self.lockInformation = new LockInformation();
         self.lockInformation.constructFromObject(data.lockInformation);
       }
       

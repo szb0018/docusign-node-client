@@ -485,7 +485,7 @@
       }
       
       if (data.mergeField) {
-        self.mergeField = new data.mergeField.constructor();
+        self.mergeField = new MergeField();
         self.mergeField.constructFromObject(data.mergeField);
       }
       
@@ -494,7 +494,7 @@
       }
       
       if (data.errorDetails) {
-        self.errorDetails = new data.errorDetails.constructor();
+        self.errorDetails = new ErrorDetails();
         self.errorDetails.constructFromObject(data.errorDetails);
       }
       

@@ -299,7 +299,7 @@
       }
       
       if (data.envelopeTemplateDefinition) {
-        self.envelopeTemplateDefinition = new data.envelopeTemplateDefinition.constructor();
+        self.envelopeTemplateDefinition = new EnvelopeTemplateDefinition();
         self.envelopeTemplateDefinition.constructFromObject(data.envelopeTemplateDefinition);
       }
       
@@ -308,12 +308,12 @@
       }
       
       if (data.recipients) {
-        self.recipients = new data.recipients.constructor();
+        self.recipients = new Recipients();
         self.recipients.constructFromObject(data.recipients);
       }
       
       if (data.customFields) {
-        self.customFields = new data.customFields.constructor();
+        self.customFields = new CustomFields();
         self.customFields.constructFromObject(data.customFields);
       }
       
@@ -370,7 +370,7 @@
       }
       
       if (data.notification) {
-        self.notification = new data.notification.constructor();
+        self.notification = new Notification();
         self.notification.constructFromObject(data.notification);
       }
       
@@ -467,7 +467,7 @@
       }
       
       if (data.emailSettings) {
-        self.emailSettings = new data.emailSettings.constructor();
+        self.emailSettings = new EmailSettings();
         self.emailSettings.constructFromObject(data.emailSettings);
       }
       
@@ -476,7 +476,7 @@
       }
       
       if (data.lockInformation) {
-        self.lockInformation = new data.lockInformation.constructor();
+        self.lockInformation = new LockInformation();
         self.lockInformation.constructFromObject(data.lockInformation);
       }
       

@@ -49,12 +49,12 @@
       }
       
       if (data.reminders) {
-        self.reminders = new data.reminders.constructor();
+        self.reminders = new Reminders();
         self.reminders.constructFromObject(data.reminders);
       }
       
       if (data.expirations) {
-        self.expirations = new data.expirations.constructor();
+        self.expirations = new Expirations();
         self.expirations.constructFromObject(data.expirations);
       }
       

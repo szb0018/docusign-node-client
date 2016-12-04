@@ -49,12 +49,12 @@
       }
       
       if (data.tabs) {
-        self.tabs = new data.tabs.constructor();
+        self.tabs = new Tabs();
         self.tabs.constructFromObject(data.tabs);
       }
       
       if (data.errorDetails) {
-        self.errorDetails = new data.errorDetails.constructor();
+        self.errorDetails = new ErrorDetails();
         self.errorDetails.constructFromObject(data.errorDetails);
       }
       

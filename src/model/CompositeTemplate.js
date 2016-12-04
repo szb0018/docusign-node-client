@@ -74,7 +74,7 @@
       }
       
       if (data.document) {
-        self.document = new data.document.constructor();
+        self.document = new Document();
         self.document.constructFromObject(data.document);
       }
       

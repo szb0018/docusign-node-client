@@ -49,12 +49,12 @@
       }
       
       if (data.signerEmailNotifications) {
-        self.signerEmailNotifications = new data.signerEmailNotifications.constructor();
+        self.signerEmailNotifications = new SignerEmailNotifications();
         self.signerEmailNotifications.constructFromObject(data.signerEmailNotifications);
       }
       
       if (data.senderEmailNotifications) {
-        self.senderEmailNotifications = new data.senderEmailNotifications.constructor();
+        self.senderEmailNotifications = new SenderEmailNotifications();
         self.senderEmailNotifications.constructFromObject(data.senderEmailNotifications);
       }
       

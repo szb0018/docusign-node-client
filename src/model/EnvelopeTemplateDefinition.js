@@ -145,7 +145,7 @@
       }
       
       if (data.lastModifiedBy) {
-        self.lastModifiedBy = new data.lastModifiedBy.constructor();
+        self.lastModifiedBy = new UserInfo();
         self.lastModifiedBy.constructFromObject(data.lastModifiedBy);
       }
       
@@ -174,7 +174,7 @@
       }
       
       if (data.owner) {
-        self.owner = new data.owner.constructor();
+        self.owner = new UserInfo();
         self.owner.constructFromObject(data.owner);
       }
       

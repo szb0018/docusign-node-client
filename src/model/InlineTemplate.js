@@ -60,7 +60,7 @@
       }
       
       if (data.envelope) {
-        self.envelope = new data.envelope.constructor();
+        self.envelope = new Envelope();
         self.envelope.constructFromObject(data.envelope);
       }
       
@@ -69,12 +69,12 @@
       }
       
       if (data.recipients) {
-        self.recipients = new data.recipients.constructor();
+        self.recipients = new Recipients();
         self.recipients.constructFromObject(data.recipients);
       }
       
       if (data.customFields) {
-        self.customFields = new data.customFields.constructor();
+        self.customFields = new CustomFields();
         self.customFields.constructFromObject(data.customFields);
       }
       
