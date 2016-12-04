@@ -414,7 +414,7 @@
       }
       
       if (data.owner) {
-        self.owner = new data.owner.constructor();
+        self.owner = new UserInfo();
         self.owner.constructFromObject(data.owner);
       }
       
@@ -423,7 +423,7 @@
       }
       
       if (data.recipients) {
-        self.recipients = new data.recipients.constructor();
+        self.recipients = new Recipients();
         self.recipients.constructFromObject(data.recipients);
       }
       
@@ -480,7 +480,7 @@
       }
       
       if (data.notification) {
-        self.notification = new data.notification.constructor();
+        self.notification = new Notification();
         self.notification.constructFromObject(data.notification);
       }
       
@@ -577,7 +577,7 @@
       }
       
       if (data.emailSettings) {
-        self.emailSettings = new data.emailSettings.constructor();
+        self.emailSettings = new EmailSettings();
         self.emailSettings.constructFromObject(data.emailSettings);
       }
       
@@ -586,7 +586,7 @@
       }
       
       if (data.lockInformation) {
-        self.lockInformation = new data.lockInformation.constructor();
+        self.lockInformation = new LockInformation();
         self.lockInformation.constructFromObject(data.lockInformation);
       }
       

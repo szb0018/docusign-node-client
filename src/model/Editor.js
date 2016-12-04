@@ -314,17 +314,17 @@
       }
       
       if (data.phoneAuthentication) {
-        self.phoneAuthentication = new data.phoneAuthentication.constructor();
+        self.phoneAuthentication = new RecipientPhoneAuthentication();
         self.phoneAuthentication.constructFromObject(data.phoneAuthentication);
       }
       
       if (data.samlAuthentication) {
-        self.samlAuthentication = new data.samlAuthentication.constructor();
+        self.samlAuthentication = new RecipientSAMLAuthentication();
         self.samlAuthentication.constructFromObject(data.samlAuthentication);
       }
       
       if (data.smsAuthentication) {
-        self.smsAuthentication = new data.smsAuthentication.constructor();
+        self.smsAuthentication = new RecipientSMSAuthentication();
         self.smsAuthentication.constructFromObject(data.smsAuthentication);
       }
       
@@ -349,7 +349,7 @@
       }
       
       if (data.idCheckInformationInput) {
-        self.idCheckInformationInput = new data.idCheckInformationInput.constructor();
+        self.idCheckInformationInput = new IdCheckInformationInput();
         self.idCheckInformationInput.constructFromObject(data.idCheckInformationInput);
       }
       
@@ -406,7 +406,7 @@
       }
       
       if (data.emailNotification) {
-        self.emailNotification = new data.emailNotification.constructor();
+        self.emailNotification = new RecipientEmailNotification();
         self.emailNotification.constructFromObject(data.emailNotification);
       }
       
@@ -415,12 +415,12 @@
       }
       
       if (data.errorDetails) {
-        self.errorDetails = new data.errorDetails.constructor();
+        self.errorDetails = new ErrorDetails();
         self.errorDetails.constructFromObject(data.errorDetails);
       }
       
       if (data.recipientAuthenticationStatus) {
-        self.recipientAuthenticationStatus = new data.recipientAuthenticationStatus.constructor();
+        self.recipientAuthenticationStatus = new AuthenticationStatus();
         self.recipientAuthenticationStatus.constructFromObject(data.recipientAuthenticationStatus);
       }
       

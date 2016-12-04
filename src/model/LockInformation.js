@@ -75,7 +75,7 @@
       }
       
       if (data.lockedByUser) {
-        self.lockedByUser = new data.lockedByUser.constructor();
+        self.lockedByUser = new UserInfo();
         self.lockedByUser.constructFromObject(data.lockedByUser);
       }
       
@@ -104,7 +104,7 @@
       }
       
       if (data.errorDetails) {
-        self.errorDetails = new data.errorDetails.constructor();
+        self.errorDetails = new ErrorDetails();
         self.errorDetails.constructFromObject(data.errorDetails);
       }
       

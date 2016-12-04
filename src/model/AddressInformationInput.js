@@ -48,7 +48,7 @@
       }
       
       if (data.addressInformation) {
-        self.addressInformation = new data.addressInformation.constructor();
+        self.addressInformation = new AddressInformation();
         self.addressInformation.constructFromObject(data.addressInformation);
       }
       

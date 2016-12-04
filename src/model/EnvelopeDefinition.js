@@ -333,17 +333,17 @@
       }
       
       if (data.recipients) {
-        self.recipients = new data.recipients.constructor();
+        self.recipients = new Recipients();
         self.recipients.constructFromObject(data.recipients);
       }
       
       if (data.customFields) {
-        self.customFields = new data.customFields.constructor();
+        self.customFields = new CustomFields();
         self.customFields.constructFromObject(data.customFields);
       }
       
       if (data.eventNotification) {
-        self.eventNotification = new data.eventNotification.constructor();
+        self.eventNotification = new EventNotification();
         self.eventNotification.constructFromObject(data.eventNotification);
       }
       
@@ -420,7 +420,7 @@
       }
       
       if (data.notification) {
-        self.notification = new data.notification.constructor();
+        self.notification = new Notification();
         self.notification.constructFromObject(data.notification);
       }
       
@@ -517,7 +517,7 @@
       }
       
       if (data.emailSettings) {
-        self.emailSettings = new data.emailSettings.constructor();
+        self.emailSettings = new EmailSettings();
         self.emailSettings.constructFromObject(data.emailSettings);
       }
       
@@ -526,7 +526,7 @@
       }
       
       if (data.lockInformation) {
-        self.lockInformation = new data.lockInformation.constructor();
+        self.lockInformation = new LockInformation();
         self.lockInformation.constructFromObject(data.lockInformation);
       }
       

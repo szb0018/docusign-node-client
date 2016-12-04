@@ -90,7 +90,7 @@
       }
       
       if (data.templateMatch) {
-        self.templateMatch = new data.templateMatch.constructor();
+        self.templateMatch = new TemplateMatch();
         self.templateMatch.constructFromObject(data.templateMatch);
       }
       

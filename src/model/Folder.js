@@ -135,7 +135,7 @@
       }
       
       if (data.errorDetails) {
-        self.errorDetails = new data.errorDetails.constructor();
+        self.errorDetails = new ErrorDetails();
         self.errorDetails.constructFromObject(data.errorDetails);
       }
       
@@ -144,7 +144,7 @@
       }
       
       if (data.filter) {
-        self.filter = new data.filter.constructor();
+        self.filter = new Filter();
         self.filter.constructFromObject(data.filter);
       }
       

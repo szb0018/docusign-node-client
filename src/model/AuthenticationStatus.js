@@ -116,87 +116,87 @@
       }
       
       if (data.accessCodeResult) {
-        self.accessCodeResult = new data.accessCodeResult.constructor();
+        self.accessCodeResult = new EventResult();
         self.accessCodeResult.constructFromObject(data.accessCodeResult);
       }
       
       if (data.phoneAuthResult) {
-        self.phoneAuthResult = new data.phoneAuthResult.constructor();
+        self.phoneAuthResult = new EventResult();
         self.phoneAuthResult.constructFromObject(data.phoneAuthResult);
       }
       
       if (data.idLookupResult) {
-        self.idLookupResult = new data.idLookupResult.constructor();
+        self.idLookupResult = new EventResult();
         self.idLookupResult.constructFromObject(data.idLookupResult);
       }
       
       if (data.idQuestionsResult) {
-        self.idQuestionsResult = new data.idQuestionsResult.constructor();
+        self.idQuestionsResult = new EventResult();
         self.idQuestionsResult.constructFromObject(data.idQuestionsResult);
       }
       
       if (data.ageVerifyResult) {
-        self.ageVerifyResult = new data.ageVerifyResult.constructor();
+        self.ageVerifyResult = new EventResult();
         self.ageVerifyResult.constructFromObject(data.ageVerifyResult);
       }
       
       if (data.sTANPinResult) {
-        self.sTANPinResult = new data.sTANPinResult.constructor();
+        self.sTANPinResult = new EventResult();
         self.sTANPinResult.constructFromObject(data.sTANPinResult);
       }
       
       if (data.ofacResult) {
-        self.ofacResult = new data.ofacResult.constructor();
+        self.ofacResult = new EventResult();
         self.ofacResult.constructFromObject(data.ofacResult);
       }
       
       if (data.liveIDResult) {
-        self.liveIDResult = new data.liveIDResult.constructor();
+        self.liveIDResult = new EventResult();
         self.liveIDResult.constructFromObject(data.liveIDResult);
       }
       
       if (data.facebookResult) {
-        self.facebookResult = new data.facebookResult.constructor();
+        self.facebookResult = new EventResult();
         self.facebookResult.constructFromObject(data.facebookResult);
       }
       
       if (data.googleResult) {
-        self.googleResult = new data.googleResult.constructor();
+        self.googleResult = new EventResult();
         self.googleResult.constructFromObject(data.googleResult);
       }
       
       if (data.linkedinResult) {
-        self.linkedinResult = new data.linkedinResult.constructor();
+        self.linkedinResult = new EventResult();
         self.linkedinResult.constructFromObject(data.linkedinResult);
       }
       
       if (data.salesforceResult) {
-        self.salesforceResult = new data.salesforceResult.constructor();
+        self.salesforceResult = new EventResult();
         self.salesforceResult.constructFromObject(data.salesforceResult);
       }
       
       if (data.twitterResult) {
-        self.twitterResult = new data.twitterResult.constructor();
+        self.twitterResult = new EventResult();
         self.twitterResult.constructFromObject(data.twitterResult);
       }
       
       if (data.openIDResult) {
-        self.openIDResult = new data.openIDResult.constructor();
+        self.openIDResult = new EventResult();
         self.openIDResult.constructFromObject(data.openIDResult);
       }
       
       if (data.anySocialIDResult) {
-        self.anySocialIDResult = new data.anySocialIDResult.constructor();
+        self.anySocialIDResult = new EventResult();
         self.anySocialIDResult.constructFromObject(data.anySocialIDResult);
       }
       
       if (data.yahooResult) {
-        self.yahooResult = new data.yahooResult.constructor();
+        self.yahooResult = new EventResult();
         self.yahooResult.constructFromObject(data.yahooResult);
       }
       
       if (data.smsAuthResult) {
-        self.smsAuthResult = new data.smsAuthResult.constructor();
+        self.smsAuthResult = new EventResult();
         self.smsAuthResult.constructFromObject(data.smsAuthResult);
       }
       

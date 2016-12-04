@@ -45,7 +45,7 @@
       }
       
       if (data.user) {
-        self.user = new data.user.constructor();
+        self.user = new UserInfo();
         self.user.constructFromObject(data.user);
       }
       
@@ -54,7 +54,7 @@
       }
       
       if (data.errorDetails) {
-        self.errorDetails = new data.errorDetails.constructor();
+        self.errorDetails = new ErrorDetails();
         self.errorDetails.constructFromObject(data.errorDetails);
       }
       
