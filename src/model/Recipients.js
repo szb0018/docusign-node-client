@@ -86,32 +86,69 @@
       if (!data) {
         return;
       }
+
+      var recipient,i;
       
       if (data.signers) {
+        for (i = 0; i < data.signers.length; i++) {
+          recipient = new Signer();
+          recipient.constructFromObject(data.signers[i]);
+          data.signers[i] = recipient;
+        }
         self.signers = data.signers;
       }
       
       if (data.agents) {
+        for (i = 0; i < data.agents.length; i++) {
+          recipient = new Agent();
+          recipient.constructFromObject(data.agents[i]);
+          data.agents[i] = recipient;
+        }
         self.agents = data.agents;
       }
       
       if (data.editors) {
+        for (i = 0; i < data.editors.length; i++) {
+          recipient = new Editor();
+          recipient.constructFromObject(data.editors[i]);
+          data.editors[i] = recipient;
+        }
         self.editors = data.editors;
       }
       
       if (data.intermediaries) {
+        for (i = 0; i < data.intermediaries.length; i++) {
+          recipient = new Intermediary();
+          recipient.constructFromObject(data.intermediaries[i]);
+          data.intermediaries[i] = recipient;
+        }
         self.intermediaries = data.intermediaries;
       }
       
       if (data.carbonCopies) {
+        for (i = 0; i < data.carbonCopies.length; i++) {
+          recipient = new CarbonCopy();
+          recipient.constructFromObject(data.carbonCopies[i]);
+          data.carbonCopies[i] = recipient;
+        }
         self.carbonCopies = data.carbonCopies;
       }
       
       if (data.certifiedDeliveries) {
+        for (i = 0; i < data.certifiedDeliveries.length; i++) {
+          recipient = new CertifiedDelivery();
+          recipient.constructFromObject(data.certifiedDeliveries[i]);
+          data.certifiedDeliveries[i] = recipient;
+        }
         self.certifiedDeliveries = data.certifiedDeliveries;
       }
       
       if (data.inPersonSigners) {
+        for (i = 0; i < data.inPersonSigners.length; i++) {
+          recipient = new InPersonSigner();
+          recipient.constructFromObject(data.inPersonSigners[i]);
+          data.inPersonSigners[i] = recipient;
+        }
         self.inPersonSigners = data.inPersonSigners;
       }
       
