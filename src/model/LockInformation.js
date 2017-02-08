@@ -22,52 +22,6 @@
   var LockInformation = function LockInformation() { 
     var self = this;
     
-    /**
-     * datatype: UserInfo
-     **/
-    self.lockedByUser = null;
-    
-    /**
-     * Specifies the friendly name of  the application that is locking the envelope.
-     * datatype: String
-     **/
-    self.lockedByApp = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.lockedUntilDateTime = null;
-    
-    /**
-     * Sets the time, in seconds, until the lock expires when there is no activity on the envelope.\n\nIf no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.\n\nThe lock duration can be extended.
-     * datatype: String
-     **/
-    self.lockDurationInSeconds = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.lockType = null;
-    
-    /**
-     * Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.
-     * datatype: String
-     **/
-    self.useScratchPad = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.lockToken = null;
-    
-    /**
-     * datatype: ErrorDetails
-     **/
-    self.errorDetails = null;
-    
 
     self.constructFromObject = function(data) {
       if (!data) {

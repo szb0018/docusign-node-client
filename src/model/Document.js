@@ -23,48 +23,6 @@
     var self = this;
     
     /**
-     * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
-     * datatype: String
-     **/
-    self.documentId = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.uri = null;
-    
-    /**
-     * The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}].
-     * datatype: String
-     **/
-    self.remoteUrl = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.name = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.password = null;
-    
-    /**
-     * When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs.
-     * datatype: String
-     **/
-    self.transformPdfFields = null;
-    
-    /**
-     * The file extension type of the document. If the document is not a PDF it is converted to a PDF.
-     * datatype: String
-     **/
-    self.fileExtension = null;
-    
-    /**
      * Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template. \n\nA matchbox consists of 5 elements:\n\n* pageNumber - The document page number  on which the matchbox will appear. \n* xPosition - The x position of the matchbox on a page. \n* yPosition - The y position of the matchbox on a page.\n* width - The width of the matchbox. \n* height - The height of the matchbox.
      * datatype: Array
      **/
@@ -72,39 +30,9 @@
     
     /**
      * 
-     * datatype: String
-     **/
-    self.order = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.pages = null;
-    
-    /**
-     * 
      * datatype: Array
      **/
     self.documentFields = [];
-    
-    /**
-     * When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.
-     * datatype: String
-     **/
-    self.encryptedWithKeyManager = null;
-    
-    /**
-     * The document byte stream. This allows putting a base64 version of document bytes into an envelope.
-     * datatype: String
-     **/
-    self.documentBase64 = null;
-    
-    /**
-     * Reserved: TBD
-     * datatype: String
-     **/
-    self.applyAnchorTabs = null;
     
 
     self.constructFromObject = function(data) {

@@ -35,15 +35,7 @@
     /// </summary>
     self.ListStatusChangesOptions = function () {
       
-      var acStatus = null;
-      
-      var block = null;
-      
-      var count = null;
-      
-      var customField = null;
-      
-      var email = null;
+      var intersectingFolderIds = null;
       
       var envelopeIds = null;
       
@@ -59,11 +51,13 @@
       
       var include = null;
       
-      var intersectingFolderIds = null;
+      var email = null;
       
       var order = null;
       
       var orderBy = null;
+      
+      var userId = null;
       
       var powerformids = null;
       
@@ -73,61 +67,29 @@
       
       var status = null;
       
-      var toDate = null;
+      var customField = null;
       
       var transactionIds = null;
       
       var userFilter = null;
       
-      var userId = null;
-      
       var userName = null;
       
+      var toDate = null;
       
-      /*
-       * Specifies the Authoritative Copy Status for the envelopes. The possible values are: Unknown, Original, Transferred, AuthoritativeCopy, AuthoritativeCopyExportPending, AuthoritativeCopyExported, DepositPending, Deposited, DepositedEO, or DepositFailed.
-       */
-      this.setAcStatus = function(acStatus) {
-        this.acStatus = acStatus;
+      var acStatus = null;
+      
+      var block = null;
+      
+      var count = null;
+      
+      
+      this.setIntersectingFolderIds = function(intersectingFolderIds) {
+        this.intersectingFolderIds = intersectingFolderIds;
       }
 	
-      this.getAcStatus = function() {
-        return this.acStatus;
-      }
-      
-      this.setBlock = function(block) {
-        this.block = block;
-      }
-	
-      this.getBlock = function() {
-        return this.block;
-      }
-      
-      this.setCount = function(count) {
-        this.count = count;
-      }
-	
-      this.getCount = function() {
-        return this.count;
-      }
-      
-      /*
-       * This specifies the envelope custom field name and value searched for in the envelope information. The value portion of the query can use partial strings by adding &#39;%&#39; (percent sign) around the custom field query value. \n\nExample 1: If you have an envelope custom field called \&quot;Region\&quot; and you want to search for all envelopes where the value is \&quot;West\&quot; you would use the query: `?custom_field=Region=West`. \n\nExample 2: To search for envelopes where the `ApplicationID` custom field has the value or partial value of \&quot;DocuSign\&quot; in field, the query would be: `?custom_field=ApplicationId=%DocuSign%` This would find envelopes where the custom field value is \&quot;DocuSign for Salesforce\&quot; or \&quot;DocuSign envelope.\&quot;
-       */
-      this.setCustomField = function(customField) {
-        this.customField = customField;
-      }
-	
-      this.getCustomField = function() {
-        return this.customField;
-      }
-      
-      this.setEmail = function(email) {
-        this.email = email;
-      }
-	
-      this.getEmail = function() {
-        return this.email;
+      this.getIntersectingFolderIds = function() {
+        return this.intersectingFolderIds;
       }
       
       this.setEnvelopeIds = function(envelopeIds) {
@@ -192,12 +154,12 @@
         return this.include;
       }
       
-      this.setIntersectingFolderIds = function(intersectingFolderIds) {
-        this.intersectingFolderIds = intersectingFolderIds;
+      this.setEmail = function(email) {
+        this.email = email;
       }
 	
-      this.getIntersectingFolderIds = function() {
-        return this.intersectingFolderIds;
+      this.getEmail = function() {
+        return this.email;
       }
       
       this.setOrder = function(order) {
@@ -214,6 +176,14 @@
 	
       this.getOrderBy = function() {
         return this.orderBy;
+      }
+      
+      this.setUserId = function(userId) {
+        this.userId = userId;
+      }
+	
+      this.getUserId = function() {
+        return this.userId;
       }
       
       this.setPowerformids = function(powerformids) {
@@ -252,14 +222,14 @@
       }
       
       /*
-       * Optional date/time setting that specifies the date/time when the request stops for status changes for envelopes in the account. If no entry, the system uses the time of the call as the `to_date`.
+       * This specifies the envelope custom field name and value searched for in the envelope information. The value portion of the query can use partial strings by adding &#39;%&#39; (percent sign) around the custom field query value. \n\nExample 1: If you have an envelope custom field called \&quot;Region\&quot; and you want to search for all envelopes where the value is \&quot;West\&quot; you would use the query: `?custom_field=Region=West`. \n\nExample 2: To search for envelopes where the `ApplicationID` custom field has the value or partial value of \&quot;DocuSign\&quot; in field, the query would be: `?custom_field=ApplicationId=%DocuSign%` This would find envelopes where the custom field value is \&quot;DocuSign for Salesforce\&quot; or \&quot;DocuSign envelope.\&quot;
        */
-      this.setToDate = function(toDate) {
-        this.toDate = toDate;
+      this.setCustomField = function(customField) {
+        this.customField = customField;
       }
 	
-      this.getToDate = function() {
-        return this.toDate;
+      this.getCustomField = function() {
+        return this.customField;
       }
       
       /*
@@ -281,20 +251,50 @@
         return this.userFilter;
       }
       
-      this.setUserId = function(userId) {
-        this.userId = userId;
-      }
-	
-      this.getUserId = function() {
-        return this.userId;
-      }
-      
       this.setUserName = function(userName) {
         this.userName = userName;
       }
 	
       this.getUserName = function() {
         return this.userName;
+      }
+      
+      /*
+       * Optional date/time setting that specifies the date/time when the request stops for status changes for envelopes in the account. If no entry, the system uses the time of the call as the `to_date`.
+       */
+      this.setToDate = function(toDate) {
+        this.toDate = toDate;
+      }
+	
+      this.getToDate = function() {
+        return this.toDate;
+      }
+      
+      /*
+       * Specifies the Authoritative Copy Status for the envelopes. The possible values are: Unknown, Original, Transferred, AuthoritativeCopy, AuthoritativeCopyExportPending, AuthoritativeCopyExported, DepositPending, Deposited, DepositedEO, or DepositFailed.
+       */
+      this.setAcStatus = function(acStatus) {
+        this.acStatus = acStatus;
+      }
+	
+      this.getAcStatus = function() {
+        return this.acStatus;
+      }
+      
+      this.setBlock = function(block) {
+        this.block = block;
+      }
+	
+      this.getBlock = function() {
+        return this.block;
+      }
+      
+      this.setCount = function(count) {
+        this.count = count;
+      }
+	
+      this.getCount = function() {
+        return this.count;
       }
       
     }
@@ -324,11 +324,7 @@
       var queryParams = {};
       if (options != null) {
         queryParams = {
-          'ac_status': options.acStatus,
-          'block': options.block,
-          'count': options.count,
-          'custom_field': options.customField,
-          'email': options.email,
+          'intersecting_folder_ids': options.intersectingFolderIds,
           'envelope_ids': options.envelopeIds,
           'exclude': options.exclude,
           'folder_ids': options.folderIds,
@@ -336,18 +332,22 @@
           'from_date': options.fromDate,
           'from_to_status': options.fromToStatus,
           'include': options.include,
-          'intersecting_folder_ids': options.intersectingFolderIds,
+          'email': options.email,
           'order': options.order,
           'order_by': options.orderBy,
+          'user_id': options.userId,
           'powerformids': options.powerformids,
           'search_text': options.searchText,
           'start_position': options.startPosition,
           'status': options.status,
-          'to_date': options.toDate,
+          'custom_field': options.customField,
           'transaction_ids': options.transactionIds,
           'user_filter': options.userFilter,
-          'user_id': options.userId,
-          'user_name': options.userName
+          'user_name': options.userName,
+          'to_date': options.toDate,
+          'ac_status': options.acStatus,
+          'block': options.block,
+          'count': options.count
         };
       }
       var headerParams = {
@@ -385,10 +385,20 @@
     /// </summary>
     self.CreateEnvelopeOptions = function () {
       
+      var completedDocumentsOnly = null;
+      
       var mergeRolesOnDraft = null;
       
       var cdseMode = null;
       
+      
+      this.setCompletedDocumentsOnly = function(completedDocumentsOnly) {
+        this.completedDocumentsOnly = completedDocumentsOnly;
+      }
+	
+      this.getCompletedDocumentsOnly = function() {
+        return this.completedDocumentsOnly;
+      }
       
       /*
        * When set to **true**, merges template roles and remove empty recipients when you create an envelope with multiple templates.
@@ -437,6 +447,7 @@
       var queryParams = {};
       if (options != null) {
         queryParams = {
+          'completed_documents_only': options.completedDocumentsOnly,
           'merge_roles_on_draft': options.mergeRolesOnDraft,
           'cdse_mode': options.cdseMode
         };

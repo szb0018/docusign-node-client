@@ -24,18 +24,6 @@
   var Attachment = function Attachment() { 
     var self = this;
     
-    /**
-     * 
-     * datatype: String
-     **/
-    self.label = null;
-    
-    /**
-     * Specifies the type of the attachment for the recipient.
-     * datatype: String
-     **/
-    self.attachmentType = null;
-    
 
     self.constructFromObject = function(data) {
       if (!data) {

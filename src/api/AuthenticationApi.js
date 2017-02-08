@@ -35,23 +35,12 @@
     /// </summary>
     self.LoginOptions = function () {
       
-      var apiPassword = null;
-      
       var includeAccountIdGuid = null;
       
       var loginSettings = null;
       
+      var apiPassword = null;
       
-      /*
-       * When set to **true**, shows the account API password in the response.
-       */
-      this.setApiPassword = function(apiPassword) {
-        this.apiPassword = apiPassword;
-      }
-	
-      this.getApiPassword = function() {
-        return this.apiPassword;
-      }
       
       /*
        * When set to **true**, shows the account ID GUID in the response.
@@ -75,6 +64,17 @@
         return this.loginSettings;
       }
       
+      /*
+       * When set to **true**, shows the account API password in the response.
+       */
+      this.setApiPassword = function(apiPassword) {
+        this.apiPassword = apiPassword;
+      }
+	
+      this.getApiPassword = function() {
+        return this.apiPassword;
+      }
+      
     }
     
     
@@ -95,9 +95,9 @@
       var queryParams = {};
       if (options != null) {
         queryParams = {
-          'api_password': options.apiPassword,
           'include_account_id_guid': options.includeAccountIdGuid,
-          'login_settings': options.loginSettings
+          'login_settings': options.loginSettings,
+          'api_password': options.apiPassword
         };
       }
       var headerParams = {

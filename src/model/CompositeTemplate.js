@@ -23,12 +23,6 @@
     var self = this;
     
     /**
-     * Specifies the identify the composite template. It is used as a reference when adding document object information. If used, the document content-disposition must include the composite template ID to which the document should be added. If composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.
-     * datatype: String
-     **/
-    self.compositeTemplateId = null;
-    
-    /**
      * 0 or more server-side templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value
      * datatype: Array
      **/
@@ -39,17 +33,6 @@
      * datatype: Array
      **/
     self.inlineTemplates = [];
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.pdfMetaDataTemplateSequence = null;
-    
-    /**
-     * datatype: Document
-     **/
-    self.document = null;
     
 
     self.constructFromObject = function(data) {

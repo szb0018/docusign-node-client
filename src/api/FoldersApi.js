@@ -209,15 +209,7 @@
     /// </summary>
     self.SearchOptions = function () {
       
-      var startPosition = null;
-      
-      var count = null;
-      
-      var fromDate = null;
-      
       var toDate = null;
-      
-      var orderBy = null;
       
       var order = null;
       
@@ -225,39 +217,14 @@
       
       var all = null;
       
+      var orderBy = null;
       
-      /*
-       * Specifies the the starting location in the result set of the items that are returned.
-       */
-      this.setStartPosition = function(startPosition) {
-        this.startPosition = startPosition;
-      }
-	
-      this.getStartPosition = function() {
-        return this.startPosition;
-      }
+      var startPosition = null;
       
-      /*
-       * Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100.
-       */
-      this.setCount = function(count) {
-        this.count = count;
-      }
-	
-      this.getCount = function() {
-        return this.count;
-      }
+      var count = null;
       
-      /*
-       * Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days.
-       */
-      this.setFromDate = function(fromDate) {
-        this.fromDate = fromDate;
-      }
-	
-      this.getFromDate = function() {
-        return this.fromDate;
-      }
+      var fromDate = null;
+      
       
       /*
        * Specifies the end of the date range to return.
@@ -268,17 +235,6 @@
 	
       this.getToDate = function() {
         return this.toDate;
-      }
-      
-      /*
-       * Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`.
-       */
-      this.setOrderBy = function(orderBy) {
-        this.orderBy = orderBy;
-      }
-	
-      this.getOrderBy = function() {
-        return this.orderBy;
       }
       
       /*
@@ -312,6 +268,50 @@
 	
       this.getAll = function() {
         return this.all;
+      }
+      
+      /*
+       * Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`.
+       */
+      this.setOrderBy = function(orderBy) {
+        this.orderBy = orderBy;
+      }
+	
+      this.getOrderBy = function() {
+        return this.orderBy;
+      }
+      
+      /*
+       * Specifies the the starting location in the result set of the items that are returned.
+       */
+      this.setStartPosition = function(startPosition) {
+        this.startPosition = startPosition;
+      }
+	
+      this.getStartPosition = function() {
+        return this.startPosition;
+      }
+      
+      /*
+       * Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100.
+       */
+      this.setCount = function(count) {
+        this.count = count;
+      }
+	
+      this.getCount = function() {
+        return this.count;
+      }
+      
+      /*
+       * Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days.
+       */
+      this.setFromDate = function(fromDate) {
+        this.fromDate = fromDate;
+      }
+	
+      this.getFromDate = function() {
+        return this.fromDate;
       }
       
     }
@@ -348,14 +348,14 @@
       var queryParams = {};
       if (options != null) {
         queryParams = {
-          'start_position': options.startPosition,
-          'count': options.count,
-          'from_date': options.fromDate,
           'to_date': options.toDate,
-          'order_by': options.orderBy,
           'order': options.order,
           'include_recipients': options.includeRecipients,
-          'all': options.all
+          'all': options.all,
+          'order_by': options.orderBy,
+          'start_position': options.startPosition,
+          'count': options.count,
+          'from_date': options.fromDate
         };
       }
       var headerParams = {

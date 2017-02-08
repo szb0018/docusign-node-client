@@ -23,57 +23,10 @@
     var self = this;
     
     /**
-     * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
-     * datatype: String
-     **/
-    self.documentId = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.name = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.type = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.uri = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.order = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.pages = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.containsPdfFormFields = null;
-    
-    /**
      * 
      * datatype: Array
      **/
     self.availableDocumentTypes = [];
-    
-    /**
-     * datatype: ErrorDetails
-     **/
-    self.errorDetails = null;
     
 
     self.constructFromObject = function(data) {

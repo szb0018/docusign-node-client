@@ -22,27 +22,6 @@
   var TemplateUpdateSummary = function TemplateUpdateSummary() { 
     var self = this;
     
-    /**
-     * The envelope ID of the envelope status that failed to post.
-     * datatype: String
-     **/
-    self.envelopeId = null;
-    
-    /**
-     * datatype: BulkEnvelopeStatus
-     **/
-    self.bulkEnvelopeStatus = null;
-    
-    /**
-     * datatype: LockInformation
-     **/
-    self.lockInformation = null;
-    
-    /**
-     * datatype: ErrorDetails
-     **/
-    self.errorDetails = null;
-    
 
     self.constructFromObject = function(data) {
       if (!data) {

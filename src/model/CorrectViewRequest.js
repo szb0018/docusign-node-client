@@ -22,18 +22,6 @@
   var CorrectViewRequest = function CorrectViewRequest() { 
     var self = this;
     
-    /**
-     * Specifies whether the window is displayed with or without dressing.
-     * datatype: String
-     **/
-    self.suppressNavigation = null;
-    
-    /**
-     * Specifies the return point after correcting the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* send (user corrects and sends the envelope)\n* save (user saves the envelope)\n* cancel (user cancels the transaction.)\n* error (there is an error when performing the correct or send)\n* sessionEnd (the session ends before the user completes another action)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers.
-     * datatype: String
-     **/
-    self.returnUrl = null;
-    
 
     self.constructFromObject = function(data) {
       if (!data) {

@@ -28,16 +28,6 @@
      **/
     self.userSettings = [];
     
-    /**
-     * datatype: SignerEmailNotifications
-     **/
-    self.signerEmailNotifications = null;
-    
-    /**
-     * datatype: SenderEmailNotifications
-     **/
-    self.senderEmailNotifications = null;
-    
 
     self.constructFromObject = function(data) {
       if (!data) {

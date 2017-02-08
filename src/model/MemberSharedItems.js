@@ -23,20 +23,10 @@
     var self = this;
     
     /**
-     * datatype: UserInfo
-     **/
-    self.user = null;
-    
-    /**
      * 
      * datatype: Array
      **/
     self.envelopes = [];
-    
-    /**
-     * datatype: ErrorDetails
-     **/
-    self.errorDetails = null;
     
 
     self.constructFromObject = function(data) {

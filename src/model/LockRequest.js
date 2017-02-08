@@ -22,36 +22,6 @@
   var LockRequest = function LockRequest() { 
     var self = this;
     
-    /**
-     * 
-     * datatype: String
-     **/
-    self.lockedByApp = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.lockDurationInSeconds = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.lockType = null;
-    
-    /**
-     * Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.
-     * datatype: String
-     **/
-    self.useScratchPad = null;
-    
-    /**
-     * 
-     * datatype: String
-     **/
-    self.templatePassword = null;
-    
 
     self.constructFromObject = function(data) {
       if (!data) {
